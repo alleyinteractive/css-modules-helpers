@@ -1,0 +1,46 @@
+{
+  "description": "JS Helpers for configuring CSS Modules and selecting hashed DOM selectors.",
+  "name": "css-modules-helpers",
+  "version": "1.0.0",
+  "author": "Alley",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alleyinteractive/css-modules-helpers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alleyinteractive/css-modules-helpers/issues"
+  },
+  "homepage": "https://github.com/alleyinteractive/css-modules-helpers#readme",
+  "main": "index.js",
+  "license": "ISC",
+  "scripts": {
+    "lint": "eslint .",
+    "preinstall": "npx check-node-version --package",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^25.1.0",
+    "check-node-version": "^4.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
+    "jest": "^25.1.0"
+  },
+  "engines": {
+    "node": "10",
+    "npm": "6"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFiles": [
+      "<rootDir>/mocks/setupFile.js"
+    ]
+  }
+}

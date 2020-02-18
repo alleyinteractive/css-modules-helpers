@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+phpunit.xml
+Thumbs.db
+node_modules/
+vendor/
+*.sql
+*.tar.gz
+*.zip

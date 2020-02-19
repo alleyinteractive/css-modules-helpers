@@ -21,19 +21,19 @@ describe('Get a hashed classname from a component', () => {
       },
     ],
   ])(
-    'Gets the `%s` classname from `%s`',
+    'Gets the `%s` component',
     (componentName, expected) => {
       expect(getComponentClassnames(componentName)).toEqual(expected);
     }
   );
 });
 
-describe('Fail to find a nonexistent classname', () => {
+describe('Fail to find a nonexistent component', () => {
   test.each([
     ['mock-three'],
     ['foo-bar'],
   ])(
-    'The `%s` classname does not exist in `%s`',
+    'Ignores non-existent component `%s`',
     (componentName) => {
       expect(getComponentClassnames(componentName)).toMatchObject({});
     }

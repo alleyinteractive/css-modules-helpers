@@ -5,7 +5,7 @@ describe('camelCase a kebab-case string', () => {
     ['mock-one', 'mockOne'],
     ['menu-item-link', 'menuItemLink'],
   ])(
-    'Gets the `%s` classname from `%s`',
+    'camelCases `%s` as `%s`',
     (componentName, expected) => {
       expect(kebabToCamelCase(componentName)).toEqual(expected);
     }
@@ -18,7 +18,7 @@ describe('Ignore non-kebab-case strings', () => {
     ['fooBar'],
     ['alignleft'],
   ])(
-    'The `%s` classname does not exist in `%s`',
+    'Ignores `%s`',
     (componentName) => {
       expect(kebabToCamelCase(componentName)).toEqual(componentName);
     }

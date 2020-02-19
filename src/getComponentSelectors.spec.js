@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import getComponentSelectors from './getComponentSelectors';
 
-describe('Get the formatted classnames for a component', () => {
+describe('Get the class selectors for a component', () => {
   test.each([
     ['mock-one', {
       alignleft: '.mock-one__alignleft___1cXIA',
@@ -15,7 +15,7 @@ describe('Get the formatted classnames for a component', () => {
       sharedName: '.mock-two__shared-name___Kf9x0',
     }],
   ])(
-    'Gets formatted classnames for %s',
+    'Gets class selectors from `%s`',
     (componentName, expected) => {
       expect(getComponentSelectors(componentName)).toEqual(expected);
     }

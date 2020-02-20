@@ -14,8 +14,8 @@ const elements = {
   },
 };
 
-describe('Test getting an element from a component', () => {
-  test('Getting elements from the available components', () => {
+describe('Test getting elements from a component', () => {
+  test('Get an element from a component', () => {
     const mockOneAlignLeft = getElementFromComponent('alignleft', 'mock-one');
     expect(mockOneAlignLeft).toEqual(elements.mockOne.alignleft);
     expect(mockOneAlignLeft).not.toEqual(elements.mockTwo.alignleft);
@@ -30,7 +30,7 @@ describe('Test getting an element from a component', () => {
     expect(firstShared).toEqual(elements.mockTwo.sharedFirst);
   });
 
-  test('Getting all elements from a component', () => {
+  test('Get all elements from a component', () => {
     const allShared = getElementFromComponent('shared-name', 'mock-two', true);
     expect(allShared).toEqual(elements.mockTwo.shared);
     expect(allShared).toBeInstanceOf(NodeList);

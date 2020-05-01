@@ -5,6 +5,7 @@ import getElementFromComponent from './getElementFromComponent';
 const elements = {
   mockOne: {
     alignleft: document.querySelector('.mock-one__alignleft___1cXIA'),
+    title: document.querySelectorAll('.mock-one__title___2kGA7._typography__header-main___2IME8'),
   },
   mockTwo: {
     alignleft: document.querySelector('.mock-two__alignleft___Lww3s'),
@@ -37,6 +38,6 @@ describe('Test getting elements from a component', () => {
 
     const mockOneTitle = getElementFromComponent('title', 'mock-one', true);
     expect(mockOneTitle).toBeInstanceOf(NodeList);
-    expect(mockOneTitle[0]).toEqual(elements.mockOne.title);
+    expect(mockOneTitle).toEqual(elements.mockOne.title);
   });
 });

@@ -5,7 +5,13 @@
  * @return {string}           The merged, formatted selectors.
  */
 export default function getChainedSelector(selectors) {
-return selectors.split(' ')
-  .map((classname) => `.${classname}`)
-  .join('');
+  let classList = '';
+
+  if ('string' === typeof selectors && 0 < selectors.length) {
+    classList = selectors.split(' ')
+      .map((classname) => `.${classname}`)
+      .join('');
+  }
+
+  return classList;
 }

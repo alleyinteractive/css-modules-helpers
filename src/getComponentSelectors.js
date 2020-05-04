@@ -1,4 +1,5 @@
 import getComponentClassnames from './getComponentClassnames';
+import getChainedSelector from './util/getChainedSelector';
 
 /**
  * Get all of a given component's hashed classnames formatted as DOM selectors.
@@ -11,7 +12,7 @@ export default function getComponentSelectors(component) {
 
   // `getComponentClassnames` returns an object.
   return Object.keys(componentClasses).reduce((acc, key) => {
-    acc[key] = `.${componentClasses[key]}`;
+    acc[key] = getChainedSelector(componentClasses[key]);
     return acc;
   }, {});
 }

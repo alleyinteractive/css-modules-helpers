@@ -1,5 +1,6 @@
 import getComponentClassnames from './getComponentClassnames';
 import kebabToCamelCase from './util/kebabToCamelCase';
+import getChainedSelector from './util/getChainedSelector';
 
 /**
  * Get a hashed classname selector from a component.
@@ -20,5 +21,5 @@ export default function getSelectorFromComponent(className, component) {
     return '';
   }
 
-  return `.${componentClassnames[camelCaseClassName]}`;
+  return getChainedSelector(componentClassnames[camelCaseClassName]);
 }

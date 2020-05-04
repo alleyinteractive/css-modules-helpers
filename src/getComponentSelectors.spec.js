@@ -6,7 +6,7 @@ describe('Get the class selectors for a component', () => {
     ['mock-one', {
       alignleft: '.mock-one__alignleft___1cXIA',
       alignright: '.mock-one__alignright___18ifD',
-      title: '.mock-one__title___2kGA7 _typography__header-main___2IME8',
+      title: '.mock-one__title___2kGA7._typography__header-main___2IME8',
       articleBody: '.mock-one__article-body___RnJE3',
     }],
     ['mock-two', {

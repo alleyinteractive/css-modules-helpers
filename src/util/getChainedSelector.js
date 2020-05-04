@@ -5,6 +5,7 @@
  * @return {string}           The merged, formatted selectors.
  */
 export default function getChainedSelector(selectors) {
-  const classList = selectors.split(' ').map((classname) => `.${classname}`);
-  return classList.join('');
+return selectors.split(' ')
+  .map((classname) => `.${classname}`)
+  .join('');
 }

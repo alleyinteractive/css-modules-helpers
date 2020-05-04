@@ -13,3 +13,19 @@ describe('Merges a string of classnames and formats them as a compound selector'
     }
   );
 });
+
+describe('Ignores empty or non-string input', () => {
+  test.each([
+    '',
+    ['', ''],
+    ['bananas', 'oranges'],
+    null,
+    document.querySelectorAll('div'),
+    { header: { wrapper: 'header__wrapper__i37d5' } },
+  ])(
+    'Returns false for bad input: `%s`',
+    (classnames) => {
+      expect(getChainedSelector(classnames)).toEqual('');
+    }
+  );
+});

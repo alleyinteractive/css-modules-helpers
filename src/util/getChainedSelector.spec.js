@@ -8,8 +8,8 @@ describe('Merges a string of classnames and formats them as a compound selector'
     ['menu-item-link', '.menu-item-link'],
   ])(
     'Merges `%s` as `%s`',
-    (componentName, expected) => {
-      expect(getChainedSelector(componentName)).toEqual(expected);
+    (classnames, expected) => {
+      expect(getChainedSelector(classnames)).toEqual(expected);
     }
   );
 });

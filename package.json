@@ -1,7 +1,7 @@
 {
   "description": "JS Helpers for configuring CSS Modules and selecting hashed DOM selectors.",
   "name": "css-modules-helpers",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Alley",
   "repository": {
     "type": "git",

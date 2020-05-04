@@ -24,9 +24,6 @@ describe('Test getting elements from a component', () => {
     const mockTwoAlignLeft = getElementFromComponent('alignleft', 'mock-two');
     expect(mockTwoAlignLeft).toEqual(elements.mockTwo.alignleft);
 
-    const mockTwoTitle = getElementFromComponent('title', 'mock-two');
-    expect(mockTwoTitle).toBeNull();
-
     const firstShared = getElementFromComponent('shared-name', 'mock-two');
     expect(firstShared).toEqual(elements.mockTwo.sharedFirst);
   });
@@ -39,5 +36,21 @@ describe('Test getting elements from a component', () => {
     const mockOneTitle = getElementFromComponent('title', 'mock-one', true);
     expect(mockOneTitle).toBeInstanceOf(NodeList);
     expect(mockOneTitle).toEqual(elements.mockOne.title);
+  });
+});
+
+describe('Should return null for nonexistent elements and components', () => {
+  test('Fail to retrieve nonexistent element', () => {
+    const nonExistentComponent = getElementFromComponent('fakename', 'non-existent-mock');
+    expect(nonExistentComponent).toBeNull();
+
+    const nonExistentElement = getElementFromComponent('title', 'mock-two');
+    expect(nonExistentElement).toBeNull();
+  });
+
+  test('Fail to get element from nonexistent component', () => {
+    const notFound = getElementFromComponent('fakename', 'non-existent-mock', true);
+    expect(notFound).toBeNull();
+    expect(notFound).not.toBeInstanceOf(NodeList);
   });
 });
